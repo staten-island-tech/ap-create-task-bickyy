@@ -125,7 +125,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DOMSelectors = void 0;
 var DOMSelectors = {
-  heroContainer: document.querySelector(".heroContainer")
+  heroContainer: document.querySelector(".heroContainer"),
+  favorite: document.querySelector(".favorite")
 };
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
@@ -250,6 +251,14 @@ var heartButton = function heartButton() {
 };
 
 heartButton();
+
+var favoriteBtn = function favoriteBtn() {
+  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
+    _DOM.DOMSelectors.favorite.classList.toggle("press");
+  });
+};
+
+favoriteBtn();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -278,7 +287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

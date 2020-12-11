@@ -34,5 +34,10 @@ const heartButton = function () {
 
 heartButton();
 
+const favoriteBtn = function () {
+  DOMSelectors.favorite.addEventListener("click", function () {
+    DOMSelectors.favorite.classList.toggle("press");
+  });
+};
 
-
+favoriteBtn();
