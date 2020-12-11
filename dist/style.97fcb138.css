@@ -1,10 +1,32 @@
 @charset "UTF-8";
+body {
+  background-image: url("https://cdn.shopify.com/s/files/1/0031/4497/4448/products/DY0269-disney-kids-3-marvel-avengers-comic-book-wallpaper-york-wallcoverings-silver-white_620x.jpg?v=1571708998");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  font-family: "Marvel", sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  width: 101%;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  height: 10rem;
+}
+
 .heroContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   padding: 0.5rem;
+  padding-top: 3rem;
 }
 
 .heroCard {
@@ -50,6 +72,25 @@
 }
 
 .heart.press {
+  color: #e23b3b;
+}
+
+.favorite {
+  cursor: pointer;
+  color: #aaa;
+}
+
+.favorite:hover {
+  color: #666;
+}
+
+.favorite:before {
+  font-family: fontawesome;
+  content: "";
+  font-style: normal;
+}
+
+.favorite.press {
   color: #e23b3b;
 }
 
