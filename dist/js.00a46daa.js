@@ -1008,7 +1008,7 @@ var regeneratorRuntime = require("regenerator-runtime"); // const init = functio
 // init();
 // $(function () {
 //     $("i").click(function () {
-//       $("i").toggleClass("press", 1000);
+//       $("i").toggleClass("press");
 //     });
 //   });
 
@@ -1048,7 +1048,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54095" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57852" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

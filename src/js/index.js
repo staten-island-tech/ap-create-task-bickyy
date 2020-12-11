@@ -27,7 +27,7 @@ let regeneratorRuntime = require("regenerator-runtime");
 
 // $(function () {
 //     $("i").click(function () {
-//       $("i").toggleClass("press", 1000);
+//       $("i").toggleClass("press");
 //     });
 //   });
 
