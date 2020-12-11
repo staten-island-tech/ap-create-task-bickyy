@@ -35,22 +35,22 @@
 
 
 
-i {
+.heart {
   cursor:pointer;
   color:#aaa;
 }
 
-i:hover {
+.heart:hover {
   color:#666;
 }
 
-i:before {
+.heart:before {
   font-family:fontawesome;
   content:'\f004';
   font-style:normal;
 }
 
-i.press {
+.heart.press {
   color:#e23b3b;
 }
 

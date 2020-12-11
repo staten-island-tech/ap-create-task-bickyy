@@ -1,42 +1,35 @@
 import { DOMSelectors } from "./DOM";
 import { heroList } from "./hero";
 
-let regeneratorRuntime = require("regenerator-runtime");
+const init = function () {
+  heroList.forEach((hero) =>
+    DOMSelectors.heroContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class = "heroCard">
+      </span>
+        <div class= "imgCard">
+        <img
+            class="heroImage"
+              src="${hero.img}"
+        />
+        </div>
+          <h1 class="heroName">${hero.name}
+          <i id="${hero.name}" class="heart"></i>
+          </h1>
+      </div>
+    `
+    )
+  );
+};
 
-// const init = function () {
-//   heroList.forEach((hero) =>
-//     DOMSelectors.heroContainer.insertAdjacentHTML(
-//       "beforeend",
-//       `
-//       <div class = "heroCard">
-//       </span>
-//         <div class= "imgCard">
-//         <img
-//             class="heroImage"
-//               src="https://i.pinimg.com/564x/e6/12/39/e612391ab8447476c0e723f46c99bd73.jpg"
-//         />
-//         </div>
-//           <h1 class="heroName">${hero.name}</h1>
-//     </div>
-//     `
-//     )
-//   );
-// };
+init();
 
-// init();
-
-// $(function () {
-//     $("i").click(function () {
-//       $("i").toggleClass("press");
-//     });
-//   });
-
-const heart = function () {
-  ("DOMSelectors.heart").click(function () {
-    "DOMSelectors.heart".toggleClass("press");
+const heartButton = function () {
+  const heart = document.getElementsByClassName(heart);
+  heart.addEventListener("click", function () {
+    heart.classList.toggle("press");
   });
 };
 
-heart();
-
-
+heartButton();
