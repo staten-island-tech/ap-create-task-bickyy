@@ -13,7 +13,7 @@ const heroList = [
     },
     {
       img: "https://i.pinimg.com/originals/83/1e/86/831e867af0b14642c2d035baafd8a781.jpg",
-      name: "The Collector",
+      name: "Collector",
     },
     {
       img: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/18698e00-244d-4a74-9598-fb07c7144eee/dbm926p-bd12a8c4-7e59-4c22-9e42-1c64d7bcc890.jpg/v1/fill/w_1024,h_1537,q_75,strp/poster__infinity_war___corvus_glaive___villains_by_4n4rkyx_dbm926p-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xNTM3IiwicGF0aCI6IlwvZlwvMTg2OThlMDAtMjQ0ZC00YTc0LTk1OTgtZmIwN2M3MTQ0ZWVlXC9kYm05MjZwLWJkMTJhOGM0LTdlNTktNGMyMi05ZTQyLTFjNjRkN2JjYzg5MC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.WuuxT55IVVWFopFYxs0p9mg8A6I8Ym4C06WvSu79ZwU",
