@@ -125,8 +125,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DOMSelectors = void 0;
 var DOMSelectors = {
-  heroContainer: document.querySelector(".heroContainer"),
-  heart: document.querySelector(".heart")
+  heroContainer: document.querySelector(".heroContainer")
 };
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
@@ -244,7 +243,7 @@ var init = function init() {
 init();
 
 var heartButton = function heartButton() {
-  var heart = document.getElementsByClassName(heart);
+  var heart = document.getElementsByClassName("heart");
   heart.addEventListener("click", function () {
     heart.classList.toggle("press");
   });

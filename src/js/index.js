@@ -26,10 +26,13 @@ const init = function () {
 init();
 
 const heartButton = function () {
-  const heart = document.getElementsByClassName(heart);
+  const heart = document.getElementsByClassName("heart");
   heart.addEventListener("click", function () {
     heart.classList.toggle("press");
   });
 };
 
 heartButton();
+
+
+
