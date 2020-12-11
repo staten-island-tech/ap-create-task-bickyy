@@ -125,7 +125,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DOMSelectors = void 0;
 var DOMSelectors = {
-  heroContainer: document.querySelector(".heroContainer")
+  heroContainer: document.querySelector(".heroContainer"),
+  heart: document.querySelector(".heart")
 };
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
@@ -985,15 +986,40 @@ var _DOM = require("./DOM");
 
 var _hero = require("./hero");
 
-var regeneratorRuntime = require("regenerator-runtime");
+var regeneratorRuntime = require("regenerator-runtime"); // const init = function () {
+//   heroList.forEach((hero) =>
+//     DOMSelectors.heroContainer.insertAdjacentHTML(
+//       "beforeend",
+//       `
+//       <div class = "heroCard">
+//       </span>
+//         <div class= "imgCard">
+//         <img
+//             class="heroImage"
+//               src="https://i.pinimg.com/564x/e6/12/39/e612391ab8447476c0e723f46c99bd73.jpg"
+//         />
+//         </div>
+//           <h1 class="heroName">${hero.name}</h1>
+//     </div>
+//     `
+//     )
+//   );
+// };
+// init();
+// $(function () {
+//     $("i").click(function () {
+//       $("i").toggleClass("press", 1000);
+//     });
+//   });
 
-var init = function init() {
-  _hero.heroList.forEach(function (hero) {
-    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", " \n      <div class = \"heroCard\">\n      <div class=\"wrapper\">\n        <input type=\"checkbox\" class=\"heart-checkbox\" id=\"heart-checkbox\">\n        <label class=\"heart\" for=\"heart-checkbox\"></label>\n      </div>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"https://i.pinimg.com/564x/e6/12/39/e612391ab8447476c0e723f46c99bd73.jpg\"\n        />\n        </div>\n          <h1 class=\"".concat(hero.name, "\">Spiderman</h1>\n    </div>\n    "));
+
+var heart = function heart() {
+  "DOMSelectors.heart".click(function () {
+    "DOMSelectors.heart".toggleClass("press");
   });
 };
 
-init();
+heart();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

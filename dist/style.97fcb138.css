@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .heroContainer {
   display: flex;
   flex-direction: row;
@@ -33,40 +34,23 @@
   font-size: 2rem;
 }
 
-.heart {
-  color: white;
-  background-color: currentColor;
-  height: 50px;
-  transform: rotate(-45deg);
-  position: absolute;
-  width: 50px;
-  margin: 1.5rem;
+i {
+  cursor: pointer;
+  color: #aaa;
 }
 
-.heart-checkbox {
-  display: none;
+i:hover {
+  color: #666;
 }
 
-.heart::before,
-.heart::after {
-  content: "";
-  background-color: currentColor;
-  border-radius: 50%;
-  height: 50px;
-  position: absolute;
-  width: 50px;
+i:before {
+  font-family: fontawesome;
+  content: "";
+  font-style: normal;
 }
 
-.heart:before {
-  top: -25px;
-}
-
-.heart:after {
-  left: 25px;
-}
-
-.heart-checkbox:checked + .heart {
-  color: red;
+i.press {
+  color: #e23b3b;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
