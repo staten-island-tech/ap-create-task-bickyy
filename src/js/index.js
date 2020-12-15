@@ -50,6 +50,7 @@ heartBtn();
 
 const color = document.getElementsByClassName("heart");
 const heroCard = dococument.getElementsByClassName("heroCard");
+
 function colorTest() {
   if ((color.style.color = "red")) {
     heroCard.style.display = "inital";

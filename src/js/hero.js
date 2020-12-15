@@ -99,7 +99,7 @@ const heroList = [
   },
   {
     img:
-      "https://static.wikia.nocookie.net/marvelmovies/images/d/d1/Scarlet_Witch_InfinityWar_poster.jpg/revision/latest/scale-to-width-down/340?cb=20180404210611",
+      "https://images.hdqwalls.com/download/wanda-maximoff-in-avengers-infinity-war-8k-poster-87-480x854.jpg",
     name: "Wanda Maximoff",
   },
   {

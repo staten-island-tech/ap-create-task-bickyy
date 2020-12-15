@@ -198,7 +198,7 @@ var heroList = [{
   img: "https://images-na.ssl-images-amazon.com/images/I/41GB-fHO6cL._AC_.jpg",
   name: "Rocket"
 }, {
-  img: "https://static.wikia.nocookie.net/marvelmovies/images/d/d1/Scarlet_Witch_InfinityWar_poster.jpg/revision/latest/scale-to-width-down/340?cb=20180404210611",
+  img: "https://images.hdqwalls.com/download/wanda-maximoff-in-avengers-infinity-war-8k-poster-87-480x854.jpg",
   name: "Wanda Maximoff"
 }, {
   img: "https://i.pinimg.com/originals/fb/47/50/fb4750f1724871bd947f8ad6d02174b0.jpg",
@@ -311,7 +311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52996" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55872" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
