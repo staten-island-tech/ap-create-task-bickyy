@@ -1,6 +1,9 @@
 import { DOMSelectors } from "./DOM";
 import { heroList } from "./hero";
 
+// let regeneratorRuntime = require("regenerator-runtime");
+// regeneratorRuntime;
+
 const init = function () {
   heroList.forEach((hero) =>
     DOMSelectors.heroContainer.insertAdjacentHTML(
@@ -25,19 +28,35 @@ const init = function () {
 
 init();
 
-const heartButton = function () {
-  const heart = document.getElementsByClassName("heart");
+const favoriteBtn = function () {
+  DOMSelectors.favorite.addEventListener("click", function () {
+    DOMSelectors.heroContainer.innerHTML = "";
+  });
+};
+favoriteBtn();
+
+const titleBtn = function () {
+  DOMSelectors.title.addEventListener("click", function () {
+    init();
+  });
+};
+titleBtn();
+
+const heart = document.getElementsByClassName("heart");
+const heartBtn = function () {
   heart.addEventListener("click", function () {
     heart.classList.toggle("press");
   });
 };
+heartBtn();
 
-heartButton();
-
-const favoriteBtn = function () {
-  DOMSelectors.favorite.addEventListener("click", function () {
-    DOMSelectors.favorite.classList.toggle("press");
-  });
-};
-
-favoriteBtn();
+// const favoriteArray = function () {
+//   const color = document.getElementsByClassName("heart");
+//   const heroCard = dococument.getElementsByClassName("heroCard");
+//   if ((color.style.color = "red")) {
+//     heroCard.style.display = "inital";
+//   } else {
+//     heroCard.style.display = "none";
+//   }
+// };
+// favoriteArray();

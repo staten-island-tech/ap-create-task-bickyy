@@ -54,7 +54,7 @@ const heroList = [
   },
   {
     img:
-      "https://static.wikia.nocookie.net/disney/images/0/06/Heimdall-ThorTDW.png/revision/latest?cb=20131112005404",
+      "https://i.pinimg.com/originals/69/f7/94/69f794242874924a10f9e8d2fe62d3f9.jpg",
     name: "Heimdall",
   },
   {
@@ -99,7 +99,7 @@ const heroList = [
   },
   {
     img:
-      "https://lh3.googleusercontent.com/proxy/JyxqSuhSisQzj8jCbbCyY9C8WO6Xknw0qmu_dj-CU7VQYwBddpp7va8VnlY8eAiyRFklZGaSL2fzHT8vCS4Xng0u6Iv92G_s1lf9HiD5Bm_yBP1cYzbrqw3b9Pg1Uk6lh4NOmB4lZ3zkELWTRGFTRT-5WstZuNFA",
+      "https://static.wikia.nocookie.net/marvelmovies/images/d/d1/Scarlet_Witch_InfinityWar_poster.jpg/revision/latest/scale-to-width-down/340?cb=20180404210611",
     name: "Wanda Maximoff",
   },
   {

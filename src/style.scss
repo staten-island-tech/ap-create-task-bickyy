@@ -12,6 +12,9 @@ body {
   flex-direction: row;
   background-color: black;
   height: 11rem;
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 2.5rem;
 }
 
 .title {
@@ -24,13 +27,17 @@ body {
   margin-top: 0.5rem;
 }
 
+.title:hover {
+  color: gray;
+}
+
 .heroContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   padding: 0.5rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .heroCard {
@@ -71,7 +78,7 @@ body {
 }
 
 .heart:hover {
-  color: pink;
+  color: gray;
 }
 
 .heart:before {
@@ -81,7 +88,7 @@ body {
 }
 
 .heart.press {
-  color: #e23b3b;
+  color: red;
 }
 
 //favorite
@@ -103,7 +110,7 @@ body {
 }
 
 .favorite:hover {
-  color: pink;
+  color: red;
 }
 
 .favorite:before {
@@ -114,5 +121,5 @@ body {
 }
 
 .favorite.press {
-  color: #e23b3b;
+  color: red;
 }

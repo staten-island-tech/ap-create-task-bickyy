@@ -126,7 +126,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.DOMSelectors = void 0;
 var DOMSelectors = {
   heroContainer: document.querySelector(".heroContainer"),
-  favorite: document.querySelector(".favorite")
+  favorite: document.querySelector(".favorite"),
+  title: document.querySelector(".title")
 };
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
@@ -170,7 +171,7 @@ var heroList = [{
   img: "https://i.pinimg.com/originals/3b/f0/43/3bf043f9c2fa807532241ec71c1784cc.jpg",
   name: "Groot"
 }, {
-  img: "https://static.wikia.nocookie.net/disney/images/0/06/Heimdall-ThorTDW.png/revision/latest?cb=20131112005404",
+  img: "https://i.pinimg.com/originals/69/f7/94/69f794242874924a10f9e8d2fe62d3f9.jpg",
   name: "Heimdall"
 }, {
   img: "https://imgc.allpostersimages.com/img/print/u-g-Q1BXG3N0.jpg?w=550&h=550&p=0",
@@ -197,7 +198,7 @@ var heroList = [{
   img: "https://images-na.ssl-images-amazon.com/images/I/41GB-fHO6cL._AC_.jpg",
   name: "Rocket"
 }, {
-  img: "https://lh3.googleusercontent.com/proxy/JyxqSuhSisQzj8jCbbCyY9C8WO6Xknw0qmu_dj-CU7VQYwBddpp7va8VnlY8eAiyRFklZGaSL2fzHT8vCS4Xng0u6Iv92G_s1lf9HiD5Bm_yBP1cYzbrqw3b9Pg1Uk6lh4NOmB4lZ3zkELWTRGFTRT-5WstZuNFA",
+  img: "https://static.wikia.nocookie.net/marvelmovies/images/d/d1/Scarlet_Witch_InfinityWar_poster.jpg/revision/latest/scale-to-width-down/340?cb=20180404210611",
   name: "Wanda Maximoff"
 }, {
   img: "https://i.pinimg.com/originals/fb/47/50/fb4750f1724871bd947f8ad6d02174b0.jpg",
@@ -235,6 +236,8 @@ var _DOM = require("./DOM");
 
 var _hero = require("./hero");
 
+// let regeneratorRuntime = require("regenerator-runtime");
+// regeneratorRuntime;
 var init = function init() {
   _hero.heroList.forEach(function (hero) {
     return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div class = \"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"".concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i id=\"").concat(hero.name, "\" class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
@@ -243,22 +246,39 @@ var init = function init() {
 
 init();
 
-var heartButton = function heartButton() {
-  var heart = document.getElementsByClassName("heart");
+var favoriteBtn = function favoriteBtn() {
+  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
+    _DOM.DOMSelectors.heroContainer.innerHTML = "";
+  });
+};
+
+favoriteBtn();
+
+var titleBtn = function titleBtn() {
+  _DOM.DOMSelectors.title.addEventListener("click", function () {
+    init();
+  });
+};
+
+titleBtn();
+var heart = document.getElementsByClassName("heart");
+
+var heartBtn = function heartBtn() {
   heart.addEventListener("click", function () {
     heart.classList.toggle("press");
   });
 };
 
-heartButton();
-
-var favoriteBtn = function favoriteBtn() {
-  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
-    _DOM.DOMSelectors.favorite.classList.toggle("press");
-  });
-};
-
-favoriteBtn();
+heartBtn(); // const favoriteArray = function () {
+//   const color = document.getElementsByClassName("heart");
+//   const heroCard = dococument.getElementsByClassName("heroCard");
+//   if ((color.style.color = "red")) {
+//     heroCard.style.display = "inital";
+//   } else {
+//     heroCard.style.display = "none";
+//   }
+// };
+// favoriteArray();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -287,7 +307,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52418" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60284" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
