@@ -1,9 +1,6 @@
 import { DOMSelectors } from "./DOM";
 import { heroList } from "./hero";
 
-// let regeneratorRuntime = require("regenerator-runtime");
-// regeneratorRuntime;
-
 const init = function () {
   heroList.forEach((hero) =>
     DOMSelectors.heroContainer.insertAdjacentHTML(
@@ -25,15 +22,7 @@ const init = function () {
     )
   );
 };
-
 init();
-
-const favoriteBtn = function () {
-  DOMSelectors.favorite.addEventListener("click", function () {
-    DOMSelectors.heroContainer.innerHTML = "";
-  });
-};
-favoriteBtn();
 
 const titleBtn = function () {
   DOMSelectors.title.addEventListener("click", function () {
@@ -42,7 +31,7 @@ const titleBtn = function () {
 };
 titleBtn();
 
-const heart = document.getElementsByClassName("heart");
+const heart = document.getElementsByClassName("heart")[0];
 const heartBtn = function () {
   heart.addEventListener("click", function () {
     heart.classList.toggle("press");
@@ -50,3 +39,16 @@ const heartBtn = function () {
 };
 heartBtn();
 
+const favoriteBtn = function () {
+  DOMSelectors.favorite.addEventListener("click", function () {
+    DOMSelectors.heroContainer.innerHTML = "";
+  });
+  const color = document.getElementsByClassName("heart");
+  const heroCard = dococument.getElementsByClassName("heroCard");
+  if ((color.style.color = "red")) {
+    heroCard.style.display = "inital";
+  } else {
+    heroCard.style.display = "none";
+  }
+};
+favoriteBtn();

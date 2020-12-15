@@ -236,8 +236,6 @@ var _DOM = require("./DOM");
 
 var _hero = require("./hero");
 
-// let regeneratorRuntime = require("regenerator-runtime");
-// regeneratorRuntime;
 var init = function init() {
   _hero.heroList.forEach(function (hero) {
     return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div  id = \"".concat(hero.name, "\" class = \"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"").concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
@@ -246,14 +244,6 @@ var init = function init() {
 
 init();
 
-var favoriteBtn = function favoriteBtn() {
-  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
-    _DOM.DOMSelectors.heroContainer.innerHTML = "";
-  });
-};
-
-favoriteBtn();
-
 var titleBtn = function titleBtn() {
   _DOM.DOMSelectors.title.addEventListener("click", function () {
     init();
@@ -261,7 +251,7 @@ var titleBtn = function titleBtn() {
 };
 
 titleBtn();
-var heart = document.getElementsByClassName("heart");
+var heart = document.getElementsByClassName("heart")[0];
 
 var heartBtn = function heartBtn() {
   heart.addEventListener("click", function () {
@@ -270,6 +260,23 @@ var heartBtn = function heartBtn() {
 };
 
 heartBtn();
+
+var favoriteBtn = function favoriteBtn() {
+  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
+    _DOM.DOMSelectors.heroContainer.innerHTML = "";
+  });
+
+  var color = document.getElementsByClassName("heart");
+  var heroCard = dococument.getElementsByClassName("heroCard");
+
+  if (color.style.color = "red") {
+    heroCard.style.display = "inital";
+  } else {
+    heroCard.style.display = "none";
+  }
+};
+
+favoriteBtn();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
