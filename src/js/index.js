@@ -9,7 +9,7 @@ const init = function () {
     DOMSelectors.heroContainer.insertAdjacentHTML(
       "beforeend",
       `
-      <div class = "heroCard">
+      <div  id = "${hero.name}" class = "heroCard">
       </span>
         <div class= "imgCard">
         <img
@@ -18,7 +18,7 @@ const init = function () {
         />
         </div>
           <h1 class="heroName">${hero.name}
-          <i id="${hero.name}" class="heart"></i>
+          <i class="heart"></i>
           </h1>
       </div>
     `
@@ -50,13 +50,3 @@ const heartBtn = function () {
 };
 heartBtn();
 
-// const favoriteArray = function () {
-//   const color = document.getElementsByClassName("heart");
-//   const heroCard = dococument.getElementsByClassName("heroCard");
-//   if ((color.style.color = "red")) {
-//     heroCard.style.display = "inital";
-//   } else {
-//     heroCard.style.display = "none";
-//   }
-// };
-// favoriteArray();

@@ -240,7 +240,7 @@ var _hero = require("./hero");
 // regeneratorRuntime;
 var init = function init() {
   _hero.heroList.forEach(function (hero) {
-    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div class = \"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"".concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i id=\"").concat(hero.name, "\" class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
+    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div  id = \"".concat(hero.name, "\" class = \"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"").concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
   });
 };
 
@@ -269,16 +269,7 @@ var heartBtn = function heartBtn() {
   });
 };
 
-heartBtn(); // const favoriteArray = function () {
-//   const color = document.getElementsByClassName("heart");
-//   const heroCard = dococument.getElementsByClassName("heroCard");
-//   if ((color.style.color = "red")) {
-//     heroCard.style.display = "inital";
-//   } else {
-//     heroCard.style.display = "none";
-//   }
-// };
-// favoriteArray();
+heartBtn();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
