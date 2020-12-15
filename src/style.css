@@ -1,4 +1,167 @@
+body {
+  background-image: url("https://cdn.shopify.com/s/files/1/0031/4497/4448/products/DY0269-disney-kids-3-marvel-avengers-comic-book-wallpaper-york-wallcoverings-silver-white_620x.jpg?v=1571708998");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  font-family: "Marvel", sans-serif;
+}
+
+.header-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: black;
+  height: 11rem;
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 2.5rem;
+}
+
+.title {
+  padding-left: 3rem;
+  font-size: 8rem;
+  color: white;
+  width: 101%;
+  margin-top: 0.5rem;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2rem;
+}
+
+.refreshPage {
+  color: white;
+  font-size: 1.8rem;
+  width: 7rem;
+  border-style: solid;
+  height: 3rem;
+  padding: 0.3rem;
+  text-align: center;
+  margin-bottom: -0.5rem;
+}
+
+.refreshPage:hover {
+  color: gray;
+}
+
+.favorite-text {
+  font-size: 1.8rem;
+  color: white;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 7rem;
+  border-style: solid;
+  height: 3rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.favorite-text:hover {
+  color: gray;
+}
+
 .heroContainer {
-  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  padding-top: 2rem;
+}
+
+.heroCard {
+  height: 25rem;
+  width: 18rem;
+  border: 1rem;
+  border-style: solid;
+  background-color: black;
+  margin: 1rem;
+}
+
+.imgCard {
+  width: 18rem;
+  height: 23rem;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 18rem;
+}
+
+.heroName {
+  text-align: center;
+  margin: 0;
+  color: white;
+  padding: 0.3rem;
+  font-size: 2rem;
+}
+
+.heart {
+  cursor: pointer;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -25rem;
+  margin-right: 0.5rem;
+}
+
+.heart:hover {
+  color: gray;
+}
+
+.heart:before {
+  font-family: fontawesome;
+  content: "\f004";
+  font-style: normal;
+}
+
+.heart.press {
+  color: red;
+}
+
+.favorite {
+  cursor: pointer;
+  color: white;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -4rem;
+  margin-left: 5.5rem;
+}
+
+.favorite:hover {
+  color: red;
+}
+
+.favorite:before {
+  font-family: fontawesome;
+  content: "\f004";
+  font-style: normal;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

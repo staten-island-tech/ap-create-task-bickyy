@@ -126,8 +126,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.DOMSelectors = void 0;
 var DOMSelectors = {
   heroContainer: document.querySelector(".heroContainer"),
-  favorite: document.querySelector(".favorite"),
-  title: document.querySelector(".title")
+  favorite: document.querySelector(".favorite-text"),
+  refresh: document.querySelector(".refreshPage")
 };
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
@@ -238,42 +238,48 @@ var _hero = require("./hero");
 
 var init = function init() {
   _hero.heroList.forEach(function (hero) {
-    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div  id = \"".concat(hero.name, "\" class = \"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"").concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
+    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div class=\"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"".concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
   });
 };
 
-init();
+init(); // const titleBtn = function () {
+//   DOMSelectors.title.addEventListener("click", function () {
+//     init();
+//   });
+// };
+// titleBtn();
 
-var titleBtn = function titleBtn() {
-  _DOM.DOMSelectors.title.addEventListener("click", function () {
-    init();
+var refresh = function refresh() {
+  _DOM.DOMSelectors.refresh.addEventListener("click", function () {
+    window.location.reload();
   });
 };
 
-titleBtn();
-var heart = document.getElementsByClassName("heart")[0];
+refresh();
+var heart = Array.from(document.getElementsByClassName("heart"));
 
 var heartBtn = function heartBtn() {
-  heart.addEventListener("click", function () {
-    heart.classList.toggle("press");
+  heart.forEach(function (h) {
+    return h.addEventListener("click", function () {
+      h.classList.toggle("press");
+    });
   });
 };
 
 heartBtn();
+var color = document.getElementsByClassName("heart");
+var heroCard = dococument.getElementsByClassName("heroCard");
 
-var favoriteBtn = function favoriteBtn() {
-  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
-    _DOM.DOMSelectors.heroContainer.innerHTML = "";
-  });
-
-  var color = document.getElementsByClassName("heart");
-  var heroCard = dococument.getElementsByClassName("heroCard");
-
+function colorTest() {
   if (color.style.color = "red") {
     heroCard.style.display = "inital";
   } else {
     heroCard.style.display = "none";
   }
+}
+
+var favoriteBtn = function favoriteBtn() {
+  _DOM.DOMSelectors.favorite.addEventListener("click", colorTest());
 };
 
 favoriteBtn();
@@ -305,7 +311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60284" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52996" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

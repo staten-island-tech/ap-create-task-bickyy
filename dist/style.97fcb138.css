@@ -19,16 +19,46 @@ body {
 }
 
 .title {
-  text-align: left;
   padding-left: 3rem;
   font-size: 8rem;
-  font-weight: bold;
   color: white;
   width: 101%;
   margin-top: 0.5rem;
 }
 
-.title:hover {
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+.refreshPage {
+  color: white;
+  font-size: 1.8rem;
+  width: 7rem;
+  border-style: solid;
+  height: 3rem;
+  padding: 0.3rem;
+  text-align: center;
+  margin-bottom: -0.5rem;
+}
+
+.refreshPage:hover {
+  color: gray;
+}
+
+.favorite-text {
+  font-size: 1.8rem;
+  color: white;
+  justify-content: flex-end;
+  width: 7rem;
+  border-style: solid;
+  height: 3rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.favorite-text:hover {
   color: gray;
 }
 
@@ -91,20 +121,12 @@ body {
   color: red;
 }
 
-.favorite-text {
-  color: white;
-  text-align: right;
-  justify-content: flex-end;
-  margin-top: 6.5rem;
-}
-
 .favorite {
   cursor: pointer;
   color: white;
   justify-content: flex-end;
-  margin-top: 6.5rem;
-  margin-left: 0.5rem;
-  margin-right: 2.5rem;
+  margin-top: -4rem;
+  margin-left: 5.5rem;
 }
 
 .favorite:hover {
