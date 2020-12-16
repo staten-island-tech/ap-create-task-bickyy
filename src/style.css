@@ -144,24 +144,7 @@ body {
   color: red;
 }
 
-.favorite {
-  cursor: pointer;
-  color: white;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: -4rem;
-  margin-left: 5.5rem;
-}
-
-.favorite:hover {
-  color: red;
-}
-
-.favorite:before {
-  font-family: fontawesome;
-  content: "\f004";
-  font-style: normal;
-  font-size: 2rem;
+.title:hover {
+  color: gray;
 }
 /*# sourceMappingURL=style.css.map */

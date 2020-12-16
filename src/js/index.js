@@ -7,7 +7,6 @@ const init = function () {
       "beforeend",
       `
       <div class="heroCard">
-      </span>
         <div class= "imgCard">
         <img
             class="heroImage"
@@ -23,13 +22,6 @@ const init = function () {
   );
 };
 init();
-
-// const titleBtn = function () {
-//   DOMSelectors.title.addEventListener("click", function () {
-//     init();
-//   });
-// };
-// titleBtn();
 
 const refresh = function () {
   DOMSelectors.refresh.addEventListener("click", function () {
@@ -48,18 +40,27 @@ const heartBtn = function () {
 };
 heartBtn();
 
-const color = document.getElementsByClassName("heart");
-const heroCard = dococument.getElementsByClassName("heroCard");
-
+const heroCard = Array.from(document.getElementsByClassName("heroCard"));
 function colorTest() {
-  if ((color.style.color = "red")) {
-    heroCard.style.display = "inital";
-  } else {
-    heroCard.style.display = "none";
-  }
+  heroCard.forEach((c) => {
+    if (!c.children[1].children[0].classList.contains("press")) {
+      c.style.display = "none";
+    }
+  });
 }
-
 const favoriteBtn = function () {
-  DOMSelectors.favorite.addEventListener("click", colorTest());
+  DOMSelectors.favorite.addEventListener("click", colorTest);
 };
 favoriteBtn();
+
+function all() {
+  heroCard.forEach((c) => {
+    if (!c.children[1].children[0].classList.contains("press")) {
+      c.style.display = "";
+    }
+  });
+}
+const titleBtn = function () {
+  DOMSelectors.title.addEventListener("click", all);
+};
+titleBtn();

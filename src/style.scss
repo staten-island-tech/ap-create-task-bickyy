@@ -119,23 +119,6 @@ body {
   color: red;
 }
 
-//favorite
-
-.favorite {
-  cursor: pointer;
-  color: white;
-  justify-content: flex-end;
-  margin-top: -4rem;
-  margin-left: 5.5rem;
-}
-
-.favorite:hover {
-  color: red;
-}
-
-.favorite:before {
-  font-family: fontawesome;
-  content: "\f004";
-  font-style: normal;
-  font-size: 2rem;
+.title:hover {
+  color: gray;
 }

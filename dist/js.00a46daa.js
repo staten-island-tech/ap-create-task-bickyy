@@ -127,7 +127,8 @@ exports.DOMSelectors = void 0;
 var DOMSelectors = {
   heroContainer: document.querySelector(".heroContainer"),
   favorite: document.querySelector(".favorite-text"),
-  refresh: document.querySelector(".refreshPage")
+  refresh: document.querySelector(".refreshPage"),
+  title: document.querySelector(".title")
 };
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
@@ -238,16 +239,11 @@ var _hero = require("./hero");
 
 var init = function init() {
   _hero.heroList.forEach(function (hero) {
-    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div class=\"heroCard\">\n      </span>\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"".concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
+    return _DOM.DOMSelectors.heroContainer.insertAdjacentHTML("beforeend", "\n      <div class=\"heroCard\">\n        <div class= \"imgCard\">\n        <img\n            class=\"heroImage\"\n              src=\"".concat(hero.img, "\"\n        />\n        </div>\n          <h1 class=\"heroName\">").concat(hero.name, "\n          <i class=\"heart\"></i>\n          </h1>\n      </div>\n    "));
   });
 };
 
-init(); // const titleBtn = function () {
-//   DOMSelectors.title.addEventListener("click", function () {
-//     init();
-//   });
-// };
-// titleBtn();
+init();
 
 var refresh = function refresh() {
   _DOM.DOMSelectors.refresh.addEventListener("click", function () {
@@ -267,22 +263,35 @@ var heartBtn = function heartBtn() {
 };
 
 heartBtn();
-var color = document.getElementsByClassName("heart");
-var heroCard = dococument.getElementsByClassName("heroCard");
+var heroCard = Array.from(document.getElementsByClassName("heroCard"));
 
 function colorTest() {
-  if (color.style.color = "red") {
-    heroCard.style.display = "inital";
-  } else {
-    heroCard.style.display = "none";
-  }
+  heroCard.forEach(function (c) {
+    if (!c.children[1].children[0].classList.contains("press")) {
+      c.style.display = "none";
+    }
+  });
 }
 
 var favoriteBtn = function favoriteBtn() {
-  _DOM.DOMSelectors.favorite.addEventListener("click", colorTest());
+  _DOM.DOMSelectors.favorite.addEventListener("click", colorTest);
 };
 
 favoriteBtn();
+
+function all() {
+  heroCard.forEach(function (c) {
+    if (!c.children[1].children[0].classList.contains("press")) {
+      c.style.display = "";
+    }
+  });
+}
+
+var titleBtn = function titleBtn() {
+  _DOM.DOMSelectors.title.addEventListener("click", all);
+};
+
+titleBtn();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -311,7 +320,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55872" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49240" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
