@@ -38,8 +38,6 @@ const heartBtn = function () {
     })
   );
 };
-heartBtn();
-
 const heroCard = Array.from(document.getElementsByClassName("heroCard"));
 function colorTest() {
   heroCard.forEach((c) => {
@@ -51,7 +49,9 @@ function colorTest() {
 const favoriteBtn = function () {
   DOMSelectors.favorite.addEventListener("click", colorTest);
 };
+
 favoriteBtn();
+heartBtn();
 
 function all() {
   heroCard.forEach((c) => {
