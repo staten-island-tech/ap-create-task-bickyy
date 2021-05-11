@@ -38,21 +38,19 @@ const heartBtn = function () {
     })
   );
 };
+heartBtn();
+
+
 const heroCard = Array.from(document.getElementsByClassName("heroCard"));
 function colorTest(arr) {
   arr.forEach((c) => {
-    if (!c.children[1].children[0].classList.contains("press")) {
+    if (c.children[1].children[0].classList.contains("press")) {
+      c.style.display = "";
+    }else {
       c.style.display = "none";
-    }
+    };
   });
 }
-const favoriteBtn = function () {
-  DOMSelectors.favorite.addEventListener("click", () => colorTest(heroCard));
-};
-
-favoriteBtn();
-heartBtn();
-
 function all() {
   heroCard.forEach((c) => {
     if (!c.children[1].children[0].classList.contains("press")) {
@@ -60,7 +58,12 @@ function all() {
     }
   });
 }
+
 const titleBtn = function () {
   DOMSelectors.title.addEventListener("click", all);
 };
+const favoriteBtn = function () {
+  DOMSelectors.favorite.addEventListener("click", () => colorTest(heroCard));
+};
+favoriteBtn();
 titleBtn();

@@ -124,12 +124,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DOMSelectors = void 0;
-var DOMSelectors = {
+
+var _DOMSelectors;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var DOMSelectors = (_DOMSelectors = {
   heroContainer: document.querySelector(".heroContainer"),
   favorite: document.querySelector(".favorite-text"),
+  randomTeamNumber: document.querySelector(".random-team-number"),
   refresh: document.querySelector(".refreshPage"),
   title: document.querySelector(".title")
-};
+}, _defineProperty(_DOMSelectors, "randomTeamNumber", document.querySelector(".random-team-number")), _defineProperty(_DOMSelectors, "randomTeam", document.querySelector(".submit-text")), _DOMSelectors);
 exports.DOMSelectors = DOMSelectors;
 },{}],"js/hero.js":[function(require,module,exports) {
 "use strict";
@@ -262,24 +268,20 @@ var heartBtn = function heartBtn() {
   });
 };
 
+heartBtn();
 var heroCard = Array.from(document.getElementsByClassName("heroCard"));
 
 function colorTest(arr) {
   arr.forEach(function (c) {
-    if (!c.children[1].children[0].classList.contains("press")) {
+    if (c.children[1].children[0].classList.contains("press")) {
+      c.style.display = "";
+    } else {
       c.style.display = "none";
     }
+
+    ;
   });
 }
-
-var favoriteBtn = function favoriteBtn() {
-  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
-    return colorTest(heroCard);
-  });
-};
-
-favoriteBtn();
-heartBtn();
 
 function all() {
   heroCard.forEach(function (c) {
@@ -293,6 +295,13 @@ var titleBtn = function titleBtn() {
   _DOM.DOMSelectors.title.addEventListener("click", all);
 };
 
+var favoriteBtn = function favoriteBtn() {
+  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
+    return colorTest(heroCard);
+  });
+};
+
+favoriteBtn();
 titleBtn();
 },{"./DOM":"js/DOM.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -322,7 +331,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54946" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56896" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
