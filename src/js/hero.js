@@ -139,7 +139,7 @@ const heroList = [
   },
   {
     img:
-      "https://vignette.wikia.nocookie.net/marveldcuniverse/images/4/41/Winter_Soldier_AIW_Profile.jpg/revision/latest/scale-to-width-down/620?cb=20180706220755",
+      "https://i.ebayimg.com/images/g/ZzgAAOSwLahaxc34/s-l640.jpg",
     name: "Winter Soldier",
   },
   {

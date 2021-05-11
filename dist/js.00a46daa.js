@@ -223,7 +223,7 @@ var heroList = [{
   img: "https://cellularnews.com/wp-content/uploads/2020/06/91-avengers-infinity-war-character-poster-war-machine-325x485.jpg",
   name: "War Machine"
 }, {
-  img: "https://vignette.wikia.nocookie.net/marveldcuniverse/images/4/41/Winter_Soldier_AIW_Profile.jpg/revision/latest/scale-to-width-down/620?cb=20180706220755",
+  img: "https://i.ebayimg.com/images/g/ZzgAAOSwLahaxc34/s-l640.jpg",
   name: "Winter Soldier"
 }, {
   img: "https://thefutureoftheforce.com/wp-content/uploads/2018/04/img_8550.jpg",
@@ -262,7 +262,6 @@ var heartBtn = function heartBtn() {
   });
 };
 
-heartBtn();
 var heroCard = Array.from(document.getElementsByClassName("heroCard"));
 
 function colorTest() {
@@ -278,6 +277,7 @@ var favoriteBtn = function favoriteBtn() {
 };
 
 favoriteBtn();
+heartBtn();
 
 function all() {
   heroCard.forEach(function (c) {
@@ -320,7 +320,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61236" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54946" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
