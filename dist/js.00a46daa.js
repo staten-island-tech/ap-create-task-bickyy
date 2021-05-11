@@ -283,8 +283,8 @@ function colorTest(arr) {
   });
 }
 
-function all() {
-  heroCard.forEach(function (c) {
+function all(arr) {
+  arr.forEach(function (c) {
     if (!c.children[1].children[0].classList.contains("press")) {
       c.style.display = "";
     }
@@ -292,7 +292,9 @@ function all() {
 }
 
 var titleBtn = function titleBtn() {
-  _DOM.DOMSelectors.title.addEventListener("click", all);
+  _DOM.DOMSelectors.title.addEventListener("click", function () {
+    return all(heroCard);
+  });
 };
 
 var favoriteBtn = function favoriteBtn() {
@@ -331,7 +333,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56896" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51136" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

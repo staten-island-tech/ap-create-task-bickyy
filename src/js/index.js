@@ -51,8 +51,8 @@ function colorTest(arr) {
     };
   });
 }
-function all() {
-  heroCard.forEach((c) => {
+function all(arr) {
+  arr.forEach((c) => {
     if (!c.children[1].children[0].classList.contains("press")) {
       c.style.display = "";
     }
@@ -60,7 +60,7 @@ function all() {
 }
 
 const titleBtn = function () {
-  DOMSelectors.title.addEventListener("click", all);
+  DOMSelectors.title.addEventListener("click", () => all(heroCard));
 };
 const favoriteBtn = function () {
   DOMSelectors.favorite.addEventListener("click", () => colorTest(heroCard));
