@@ -39,15 +39,15 @@ const heartBtn = function () {
   );
 };
 const heroCard = Array.from(document.getElementsByClassName("heroCard"));
-function colorTest() {
-  heroCard.forEach((c) => {
+function colorTest(arr) {
+  arr.forEach((c) => {
     if (!c.children[1].children[0].classList.contains("press")) {
       c.style.display = "none";
     }
   });
 }
 const favoriteBtn = function () {
-  DOMSelectors.favorite.addEventListener("click", colorTest);
+  DOMSelectors.favorite.addEventListener("click", () => colorTest(heroCard));
 };
 
 favoriteBtn();

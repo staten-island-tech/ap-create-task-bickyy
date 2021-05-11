@@ -264,8 +264,8 @@ var heartBtn = function heartBtn() {
 
 var heroCard = Array.from(document.getElementsByClassName("heroCard"));
 
-function colorTest() {
-  heroCard.forEach(function (c) {
+function colorTest(arr) {
+  arr.forEach(function (c) {
     if (!c.children[1].children[0].classList.contains("press")) {
       c.style.display = "none";
     }
@@ -273,7 +273,9 @@ function colorTest() {
 }
 
 var favoriteBtn = function favoriteBtn() {
-  _DOM.DOMSelectors.favorite.addEventListener("click", colorTest);
+  _DOM.DOMSelectors.favorite.addEventListener("click", function () {
+    return colorTest(heroCard);
+  });
 };
 
 favoriteBtn();
